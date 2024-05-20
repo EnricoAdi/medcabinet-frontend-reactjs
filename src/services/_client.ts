@@ -17,6 +17,7 @@ const publicClient = axios.create({
   baseURL: API_URL,
   headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
   }
 });
 
@@ -24,6 +25,7 @@ const privateClient = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*"
   },
 });
 
@@ -31,6 +33,7 @@ const privateClientFormData = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-Type": "multipart/form-data",
+    "Access-Control-Allow-Origin": "*"
   },
 });
 
