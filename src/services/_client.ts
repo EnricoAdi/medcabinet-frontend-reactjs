@@ -2,8 +2,8 @@ import axios from "axios";
 import KEY from "./key";
 import HttpStatus from "../enums/httpStatus.enum";
 
-// const API_URL = "https://medcabinet-backend-nestjs.vercel.app/api/"
-const API_URL = "http://localhost:3002/api/"
+const API_URL = "https://medcabinet-backend-nestjs.vercel.app/api/"
+// const API_URL = "http://localhost:3002/api/"
 // const baseClient = axios.create({
 //   baseURL: API_URL
 // })
