@@ -1,0 +1,3 @@
+type BaseDRO = {
+  message: string
+}
