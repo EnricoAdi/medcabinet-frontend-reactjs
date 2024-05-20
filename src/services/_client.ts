@@ -17,24 +17,30 @@ const publicClient = axios.create({
   baseURL: API_URL,
   headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-  }
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "*"
+  },
+  withCredentials: true
 });
 
 const privateClient = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*"
-  },
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*"
+},
+  withCredentials: true
 });
 
 const privateClientFormData = axios.create({
   baseURL: API_URL,
   headers: {
     "Content-Type": "multipart/form-data",
-    "Access-Control-Allow-Origin": "*"
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*"
   },
+  withCredentials: true
 });
 
 privateClient.interceptors.request.use(async (req) => {
