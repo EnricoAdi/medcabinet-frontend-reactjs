@@ -54,7 +54,7 @@ privateClient.interceptors.response.use(
     return response;
   },
   async (error) => {
-    const request = error.config;
+    // const request = error.config;
     if (error.response.status === HttpStatus.UNAUTHORIZED) {
       // let errorMsg = error.response.data.message 
       //auto logout
@@ -68,7 +68,7 @@ privateClientFormData.interceptors.response.use(
     return response;
   },
   async (error) => {
-    const request = error.config;
+    // const request = error.config;
     if (error.response.status === HttpStatus.UNAUTHORIZED) {
       // let errorMsg = error.response.data.message 
       //auto logout
