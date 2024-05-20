@@ -2,8 +2,8 @@ import axios from "axios";
 import KEY from "./key";
 import HttpStatus from "../enums/httpStatus.enum";
 
-const API_URL = "https://medcabinet-backend-nestjs.vercel.app/api/"
-// const API_URL = "http://localhost:3002/api/"
+// const API_URL = "https://medcabinet-backend-nestjs.vercel.app/api/"
+const API_URL = "http://localhost:3002/api/"
 // const baseClient = axios.create({
 //   baseURL: API_URL
 // })
@@ -16,31 +16,22 @@ function setAccessToken(token:string) {
 const publicClient = axios.create({
   baseURL: API_URL,
   headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "*"
-  },
-  withCredentials: true
+      "Content-Type": "application/json", 
+  }
 });
 
 const privateClient = axios.create({
   baseURL: API_URL,
   headers: {
-    "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "*"
-},
-  withCredentials: true
+    "Content-Type": "application/json", 
+}, 
 });
 
 const privateClientFormData = axios.create({
   baseURL: API_URL,
   headers: {
-    "Content-Type": "multipart/form-data",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "*"
-  },
-  withCredentials: true
+    "Content-Type": "multipart/form-data",  
+  }, 
 });
 
 privateClient.interceptors.request.use(async (req) => {
